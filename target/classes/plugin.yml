@@ -1,6 +1,6 @@
 name: CoderDojoEVV
 main: com.hyperling.minecraft.coderdojoevv.CoderDojoEVV
-version: 0.1.6
+version: 0.1.7
 
 commands:
    heal:
