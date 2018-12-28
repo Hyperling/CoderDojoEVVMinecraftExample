@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.hyperling.minecraft</groupId>
   <artifactId>CoderDojoEVV</artifactId>
-  <version>0.1.4-SNAPSHOT</version>
+  <version>0.1.5-SNAPSHOT</version>
   <name>Coder Dojo Test</name>
   <description>Test project written to learn how to do Minecraft plug-in for Coder Dojo.</description>
   

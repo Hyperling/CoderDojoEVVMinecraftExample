@@ -97,7 +97,7 @@ public final class CoderDojoEVV extends JavaPlugin implements Listener {
 			player.setHealth(health);
 			player.setFireTicks(0);
 			player.setFoodLevel(food);
-			getLogger().info(player.getName() + " has healed.");
+			getLogger().info(player.getName() + " has healed successfully.");
 		}
 		
 		getLogger().info("Finished onCommand().");
