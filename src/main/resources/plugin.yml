@@ -1,3 +1,7 @@
-name: CoderDojoTest
-main: com.hyperling.minecraft.coderdojotest.CoderDojoTest
-version: 0.1.2
+name: CoderDojoEVV
+main: com.hyperling.minecraft.coderdojoevv.CoderDojoEVV
+version: 0.1.4
+
+commands:
+   heal:
+      description: Heal hearts, food, and ends fire.

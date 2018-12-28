@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.hyperling.minecraft</groupId>
-  <artifactId>CoderDojoTest</artifactId>
-  <version>0.1.3-SNAPSHOT</version>
+  <artifactId>CoderDojoEVV</artifactId>
+  <version>0.1.4-SNAPSHOT</version>
   <name>Coder Dojo Test</name>
   <description>Test project written to learn how to do Minecraft plug-in for Coder Dojo.</description>
   
