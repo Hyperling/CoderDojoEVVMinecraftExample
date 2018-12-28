@@ -1,13 +1,15 @@
 # CoderDojoEVVMinecraftExample
+Project written to learn and demonstrate how to do Minecraft plugins for Coder Dojo in Evansville, Indiana.
 
-pom.xml is a configuration file which automaticall downloads the .jar binaries of bukkit and spigot.
+Notes:
+pom.xml is a configuration file which automatically downloads the .jar binaries of bukkit and spigot.
 
-Java code is locared in /src/main/java/com/hyperling/minecraft/coderdojotest/.
+Java code is located in /src/main/java/com/hyperling/minecraft/coderdojotest/.
 
 Plugin exports are located in /target/.
 
 
-Link to setup and development tutorial:
+Link to development setup and coding tutorial:
 https://bukkit.gamepedia.com/Plugin_Tutorial
 
 Guide on running a Minecraft server:
