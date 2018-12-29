@@ -27,8 +27,20 @@ public final class CoderDojoEVV extends JavaPlugin implements Listener {
 
 		getLogger().info(player.getName() + " issued command with label " + label + ".");
 		
-		if (label.equals("heal")) {
-			new Heal(this, player);				
+		switch (label) {
+		case "heal":
+			new Heal(this, player);
+			break;
+		case "excavate":
+			int size;
+			try {
+				size = Integer.parseInt(args[0]);
+			}
+			catch (Exception e) {
+				getLogger().info("Failed to convert argument to size, defaulting to 8.");
+				size = 8;
+			}
+			new Excavate(this, player, size);
 		}
 		
 		getLogger().info("Finished onCommand().");
