@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class DiamondItems implements Listener{
+public class DiamondItems implements Listener {
 	final JavaPlugin plugin;
 	
 	public DiamondItems (JavaPlugin plugin) {
@@ -26,7 +26,7 @@ public class DiamondItems implements Listener{
 
 		if (plugin.getServer().getDefaultGameMode() != GameMode.CREATIVE) {
 			giveDiamondItems(inv);			
-			plugin.getServer().broadcastMessage(player.getDisplayName() + " was given back items.");
+			player.sendMessage("Diamond items have been returned.");
 		}
 		plugin.getLogger().info("Finished onRespawn().");
 	}
@@ -36,14 +36,14 @@ public class DiamondItems implements Listener{
 		plugin.getLogger().info("Running onJoin.");
 		Player player = event.getPlayer();
 		
-		plugin.getServer().broadcastMessage("Welcome to the server, " + player.getDisplayName() + "!");
+		player.sendMessage("Welcome to the server, " + player.getDisplayName() + "!");
 
 		final PlayerInventory inv = player.getInventory();
 
 		// Give diamond tools and food if not in creative
 		if (plugin.getServer().getDefaultGameMode() != GameMode.CREATIVE) {
 			giveDiamondItems(inv);
-			plugin.getServer().broadcastMessage("Enjoy your items!");
+			player.sendMessage("Enjoy your items!");
 		}
 		else {
 			inv.clear();

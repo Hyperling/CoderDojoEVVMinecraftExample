@@ -1,9 +1,11 @@
 name: CoderDojoEVV
 main: com.hyperling.minecraft.coderdojoevv.CoderDojoEVV
-version: 0.1.8
+version: 0.2.0
 
 commands:
    heal:
       description: Heal hearts, food, and ends fire.
    excavate:
-      description: Gather all items in X blocks and add them to inventory
+      description: Gather all items in X blocks and add them to inventory.
+   invincible:
+      description: Prevents player from taking damage.

@@ -14,33 +14,37 @@ public final class CoderDojoEVV extends JavaPlugin implements Listener {
 		
 		DiamondItems di = new DiamondItems(this);
 		getServer().getPluginManager().registerEvents(di, this);
+		
+		Invincible i = new Invincible(this);
+		getServer().getPluginManager().registerEvents(i, this);
+		
+		super.onEnable();
 	}
 	
 	@Override
 	public void onDisable() {
 		getLogger().info("onDisable has been accessed.");
+		super.onDisable();
 	}
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		Player player = (Player) sender;
-
-		getLogger().info(player.getName() + " issued command with label " + label + ".");
-		
-		switch (label) {
-		case "heal":
-			new Heal(this, player);
-			break;
-		case "excavate":
-			int size;
-			try {
-				size = Integer.parseInt(args[0]);
+		if (sender instanceof Player) {
+			Player player = (Player) sender;
+	
+			getLogger().info(player.getName() + " issued command with label " + label + ".");
+			
+			switch (label.toLowerCase()) {
+			case "heal":
+				new Heal(this, player);
+				break;
+			case "excavate":
+				new Excavate(this, player, args);
+				break;
+			case "invincible":
+				new Invincible(this, player, args);
+				break;
 			}
-			catch (Exception e) {
-				getLogger().info("Failed to convert argument to size, defaulting to 8.");
-				size = 8;
-			}
-			new Excavate(this, player, size);
 		}
 		
 		getLogger().info("Finished onCommand().");
